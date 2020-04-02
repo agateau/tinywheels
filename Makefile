@@ -142,6 +142,11 @@ fastlane-beta:
 	fastlane supply --track beta --apk archives/pixelwheels-$(VERSION).apk
 
 # Cleaning conf
+backup-desktop-conf:
+	mkdir backup
+	cp ~/.config/agateau.com/pixelwheels.conf backup || true
+	cp -R ~/.local/share/pixelwheels backup
+
 clean-desktop-conf:
 	rm -f ~/.config/agateau.com/pixelwheels.conf
 	rm -rf ~/.local/share/pixelwheels
