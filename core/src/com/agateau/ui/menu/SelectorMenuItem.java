@@ -110,7 +110,7 @@ public class SelectorMenuItem<T> extends RangeMenuItem {
 
     public void setCurrentData(T data) {
         for (int idx = 0; idx < mEntries.size; ++idx) {
-            if (mEntries.get(idx).data == data) {
+            if (mEntries.get(idx).data.equals(data)) {
                 setCurrentIndex(idx);
                 return;
             }
