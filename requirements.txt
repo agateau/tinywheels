@@ -1,3 +1,3 @@
-Pillow==7.1.1
+Pillow==8.2.0
 git+https://github.com/agateau/pafx@9c364ca9098d70ee23b6c4caccbcdf0cc44f2fb4#egg=pafx
 pypng==0.0.20
