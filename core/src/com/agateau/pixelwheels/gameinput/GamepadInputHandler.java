@@ -18,6 +18,8 @@
  */
 package com.agateau.pixelwheels.gameinput;
 
+import static com.agateau.translations.Translator.tr;
+
 import com.agateau.ui.GamepadInputMapper;
 import com.agateau.ui.GamepadInputMappers;
 import com.badlogic.gdx.utils.Array;
@@ -41,7 +43,7 @@ public class GamepadInputHandler extends KeyboardInputHandler {
 
         @Override
         public String getName() {
-            return "Gamepad";
+            return tr("Gamepad");
         }
 
         @Override

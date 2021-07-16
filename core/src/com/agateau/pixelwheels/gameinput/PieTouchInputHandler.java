@@ -18,6 +18,8 @@
  */
 package com.agateau.pixelwheels.gameinput;
 
+import static com.agateau.translations.Translator.tr;
+
 import com.agateau.pixelwheels.Assets;
 import com.agateau.pixelwheels.bonus.Bonus;
 import com.agateau.pixelwheels.racescreen.Hud;
@@ -46,7 +48,7 @@ public class PieTouchInputHandler implements GameInputHandler {
 
         @Override
         public String getName() {
-            return "Pie buttons";
+            return tr("Pie buttons");
         }
 
         @Override

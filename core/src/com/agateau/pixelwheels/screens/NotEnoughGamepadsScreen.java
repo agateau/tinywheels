@@ -1,5 +1,7 @@
 package com.agateau.pixelwheels.screens;
 
+import static com.agateau.translations.Translator.tr;
+
 import com.agateau.pixelwheels.Assets;
 import com.agateau.pixelwheels.PwGame;
 import com.agateau.pixelwheels.PwRefreshHelper;
@@ -52,8 +54,8 @@ public class NotEnoughGamepadsScreen extends PwStageScreen {
             if (playerId > 0) {
                 sStringBuilder.append("\n");
             }
-            sStringBuilder.append(String.format(Locale.US, "Player #%d: ", playerId + 1));
-            sStringBuilder.append(ok ? "OK" : "Missing");
+            sStringBuilder.append(String.format(Locale.US, tr("Player #%d: "), playerId + 1));
+            sStringBuilder.append(ok ? tr("OK") : tr("Missing"));
         }
         mLabel.setText(sStringBuilder.toString());
         mLabel.setSize(mLabel.getPrefWidth(), mLabel.getPrefHeight());
@@ -71,7 +73,7 @@ public class NotEnoughGamepadsScreen extends PwStageScreen {
         mLabel = builder.getActor("gamepadsLabel");
 
         Menu menu = builder.getActor("menu");
-        menu.addButton("MAIN MENU")
+        menu.addButton(tr("MAIN MENU"))
                 .addListener(
                         new MenuItemListener() {
                             @Override

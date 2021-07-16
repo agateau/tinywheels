@@ -21,6 +21,7 @@ package com.agateau.pixelwheels.desktop;
 import com.agateau.pixelwheels.PwGame;
 import com.agateau.pixelwheels.screens.PwStageScreen;
 import com.agateau.utils.FileUtils;
+import com.agateau.utils.Translator;
 import com.badlogic.gdx.Files;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
@@ -34,6 +35,9 @@ public class DesktopLauncher {
         config.setPreferencesConfig(".config/agateau.com", Files.FileType.External);
         config.useVsync(true);
         FileUtils.appName = "pixelwheels";
+
+        Translator.setImplementation(new Translator.DebugImplementation());
+
         new Lwjgl3Application(new PwGame(), config);
     }
 }

@@ -18,6 +18,8 @@
  */
 package com.agateau.ui.menu;
 
+import static com.agateau.translations.Translator.tr;
+
 import com.agateau.ui.Scene2dUtils;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -185,6 +187,6 @@ public class SwitchMenuItem extends Actor implements MenuItem {
     }
 
     protected String formatValue(boolean value) {
-        return value ? "ON" : "OFF";
+        return value ? tr("ON") : tr("OFF");
     }
 }

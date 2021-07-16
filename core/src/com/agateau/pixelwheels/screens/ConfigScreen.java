@@ -18,6 +18,8 @@
  */
 package com.agateau.pixelwheels.screens;
 
+import static com.agateau.translations.Translator.tr;
+
 import com.agateau.pixelwheels.Constants;
 import com.agateau.pixelwheels.GameConfig;
 import com.agateau.pixelwheels.PwGame;
@@ -69,8 +71,9 @@ public class ConfigScreen extends PwStageScreen {
     private static WebSiteLinkInfo sWebSiteLinkInfo =
             new WebSiteLinkInfo(
                     "https://agateau.com/support/",
-                    "Pixel Wheels is free, but you can support its\ndevelopment in various ways.",
-                    "VISIT SUPPORT PAGE");
+                    tr(
+                            "Pixel Wheels is free, but you can support its\ndevelopment in various ways."),
+                    tr("VISIT SUPPORT PAGE"));
 
     interface GameInputHandlerConfigScreenFactory {
         Screen createScreen(PwGame game, int playerIdx);
@@ -125,7 +128,7 @@ public class ConfigScreen extends PwStageScreen {
         }
 
         {
-            MenuItemGroup group = tab.addPage("Audio & Video");
+            MenuItemGroup group = tab.addPage(tr("Audio & Video"));
 
             final SwitchMenuItem soundFxSwitch = new SwitchMenuItem(menu);
             soundFxSwitch.setChecked(gameConfig.playSoundFx);
@@ -139,7 +142,7 @@ public class ConfigScreen extends PwStageScreen {
                                     gameConfig.flush();
                                 }
                             });
-            group.addItemWithLabel("Sound FX:", soundFxSwitch);
+            group.addItemWithLabel(tr("Sound FX:"), soundFxSwitch);
 
             final SwitchMenuItem musicSwitch = new SwitchMenuItem(menu);
             musicSwitch.setChecked(gameConfig.playMusic);
@@ -153,7 +156,7 @@ public class ConfigScreen extends PwStageScreen {
                                     gameConfig.flush();
                                 }
                             });
-            group.addItemWithLabel("Music:", musicSwitch);
+            group.addItemWithLabel(tr("Music:"), musicSwitch);
 
             if (PlatformUtils.isDesktop()) {
                 final SwitchMenuItem fullscreenSwitch = new SwitchMenuItem(menu);
@@ -169,15 +172,15 @@ public class ConfigScreen extends PwStageScreen {
                                         gameConfig.flush();
                                     }
                                 });
-                group.addItemWithLabel("Fullscreen:", fullscreenSwitch);
+                group.addItemWithLabel(tr("Fullscreen:"), fullscreenSwitch);
             }
         }
 
         {
-            MenuItemGroup group = tab.addPage("About");
+            MenuItemGroup group = tab.addPage(tr("About"));
             group.setWidth(400);
-            group.addLabel(StringUtils.format("Pixel Wheels %s", VersionInfo.VERSION));
-            group.addButton("CREDITS")
+            group.addLabel(StringUtils.format(tr("Pixel Wheels %s"), VersionInfo.VERSION));
+            group.addButton(tr("CREDITS"))
                     .addListener(
                             new ClickListener() {
                                 @Override
@@ -198,8 +201,8 @@ public class ConfigScreen extends PwStageScreen {
         }
 
         {
-            MenuItemGroup group = tab.addPage("Misc");
-            ButtonMenuItem developerButton = new ButtonMenuItem(menu, "Developer Options");
+            MenuItemGroup group = tab.addPage(tr("Misc"));
+            ButtonMenuItem developerButton = new ButtonMenuItem(menu, tr("DEVELOPER OPTIONS"));
             developerButton
                     .getActor()
                     .addListener(
@@ -209,7 +212,7 @@ public class ConfigScreen extends PwStageScreen {
                                     mGame.pushScreen(new DebugScreen(mGame));
                                 }
                             });
-            group.addItemWithLabel("Internal:", developerButton);
+            group.addItemWithLabel(tr("Internal:"), developerButton);
         }
 
         builder.getActor("backButton")
@@ -293,9 +296,9 @@ public class ConfigScreen extends PwStageScreen {
 
     private void setupInputSelector(Menu menu, MenuItemGroup group, String label, final int idx) {
         SelectorMenuItem<GameInputHandlerFactory> selector = new SelectorMenuItem<>(menu);
-        group.addItemWithLabel(label + ":", selector);
+        group.addItemWithLabel(StringUtils.format(tr("%s:"), label), selector);
 
-        ButtonMenuItem configureButton = new ButtonMenuItem(menu, "Configure");
+        ButtonMenuItem configureButton = new ButtonMenuItem(menu, tr("CONFIGURE"));
         group.addItemWithLabel("", configureButton);
 
         InputSelectorController controller =

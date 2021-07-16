@@ -18,6 +18,8 @@
  */
 package com.agateau.pixelwheels.screens;
 
+import static com.agateau.translations.Translator.tr;
+
 import com.agateau.pixelwheels.PwGame;
 import com.agateau.pixelwheels.PwRefreshHelper;
 import com.agateau.pixelwheels.gameinput.KeyboardInputHandler;
@@ -66,10 +68,10 @@ public class KeyboardConfigScreen extends PwStageScreen {
 
         Menu menu = builder.getActor("menu");
 
-        createLabelItem(menu, "Steer left:", mapper.getKeys(VirtualKey.LEFT));
-        createLabelItem(menu, "Steer right:", mapper.getKeys(VirtualKey.RIGHT));
-        createLabelItem(menu, "Brake:", mapper.getKeys(VirtualKey.DOWN));
-        createLabelItem(menu, "Trigger:", mapper.getKeys(VirtualKey.TRIGGER));
+        createLabelItem(menu, tr("Steer left:"), mapper.getKeys(VirtualKey.LEFT));
+        createLabelItem(menu, tr("Steer right:"), mapper.getKeys(VirtualKey.RIGHT));
+        createLabelItem(menu, tr("Brake:"), mapper.getKeys(VirtualKey.DOWN));
+        createLabelItem(menu, tr("Trigger:"), mapper.getKeys(VirtualKey.TRIGGER));
 
         builder.getActor("backButton")
                 .addListener(

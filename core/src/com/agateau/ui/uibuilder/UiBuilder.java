@@ -18,6 +18,8 @@
  */
 package com.agateau.ui.uibuilder;
 
+import static com.agateau.translations.Translator.tr;
+
 import com.agateau.ui.AnimatedImage;
 import com.agateau.ui.DimensionParser;
 import com.agateau.ui.anchor.Anchor;
@@ -179,7 +181,7 @@ public class UiBuilder {
                 "TextButton",
                 (uiBuilder, element) -> {
                     String styleName = element.getAttribute("style", "default");
-                    String text = processText(element.getText());
+                    String text = tr(processText(element.getText()));
                     return new TextButton(text, mSkin, styleName);
                 });
         mActorFactories.put("Group", (uiBuilder, element) -> new Group());
@@ -195,7 +197,7 @@ public class UiBuilder {
                 "Label",
                 (uiBuilder, element) -> {
                     String styleName = element.getAttribute("style", "default");
-                    String text = processText(element.getText());
+                    String text = tr(processText(element.getText()));
                     Label label = new Label(text, mSkin, styleName);
                     int align = parseAlign(element);
                     if (align != -1) {
@@ -241,7 +243,7 @@ public class UiBuilder {
                 "CheckBox",
                 (uiBuilder, element) -> {
                     String styleName = element.getAttribute("style", "default");
-                    String text = element.getText();
+                    String text = tr(element.getText());
                     return new CheckBox(text, mSkin, styleName);
                 });
         mActorFactories.put("Menu", (uiBuilder, element) -> createMenu(element));
@@ -259,17 +261,21 @@ public class UiBuilder {
                 "ButtonMenuItem",
                 (menu, element) -> {
                     String label = element.getAttribute("label", null);
-                    String text = element.getAttribute("text", "");
+                    String text = tr(element.getAttribute("text", ""));
                     ButtonMenuItem item = new ButtonMenuItem(menu, text);
                     if (label == null) {
                         menu.addItem(item);
                     } else {
-                        menu.addItemWithLabel(label, item);
+                        menu.addItemWithLabel(tr(label), item);
                     }
                     return item;
                 });
         mMenuItemFactories.put(
-                "LabelMenuItem", (menu, element) -> menu.addLabel(element.getAttribute("text")));
+                "LabelMenuItem",
+                (menu, element) -> {
+                    String text = tr(element.getAttribute("text"));
+                    return menu.addLabel(text);
+                });
     }
 
     public void defineVariable(String name) {

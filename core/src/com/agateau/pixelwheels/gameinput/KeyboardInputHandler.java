@@ -18,6 +18,8 @@
  */
 package com.agateau.pixelwheels.gameinput;
 
+import static com.agateau.translations.Translator.tr;
+
 import com.agateau.pixelwheels.Assets;
 import com.agateau.pixelwheels.GamePlay;
 import com.agateau.pixelwheels.bonus.Bonus;
@@ -55,7 +57,7 @@ public class KeyboardInputHandler implements GameInputHandler {
 
         @Override
         public String getName() {
-            return "Keyboard";
+            return tr("Keyboard");
         }
 
         @Override
