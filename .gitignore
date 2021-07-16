@@ -86,3 +86,4 @@ fastlane/google-play-api.json
 
 ## Python
 __pycache__/
+po/files

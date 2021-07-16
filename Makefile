@@ -132,4 +132,20 @@ check: codingstyle-check
 	@$(GRADLEW) check
 	@$(GRADLEW) test
 
+# Translations
+po-update:
+	@echo "Listing files to translate"
+	@rm -f po/files
+	@for dir in core desktop android ; do \
+		find $$dir -name '*.java' | grep -v '/build/' >> po/files ; \
+	done
+
+	@echo "Extracting messages"
+	@xgettext --from-code=utf-8 --keyword=tr --keyword=trn:1,2 --output po/messages.pot --files-from po/files
+
+	@for po_file in po/*.po ; do \
+		echo "Updating $$po_file" ; \
+		msgmerge --update $$po_file po/messages.pot ; \
+	done
+
 .PHONY: desktop-dist apk-dist dist clean-dist tag tagpush fastlane-beta check tools build release-archives

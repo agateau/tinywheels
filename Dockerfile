@@ -4,6 +4,7 @@ FROM debian:9
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         curl \
+        gettext \
         git \
         imagemagick \
         make \

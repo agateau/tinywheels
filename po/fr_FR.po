@@ -1,0 +1,113 @@
+#: core/src/com/agateau/pixelwheels/gameinput/PieTouchInputHandler.java:51
+msgid "Pie buttons"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/gameinput/GamepadInputHandler.java:46
+msgid "Gamepad"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/gameinput/KeyboardInputHandler.java:60
+msgid "Keyboard"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/gameinput/SidesTouchInputHandler.java:51
+msgid "Side buttons"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/NotEnoughGamepadsScreen.java:57
+msgid "Player #%d: "
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/NotEnoughGamepadsScreen.java:58
+msgid "OK"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/NotEnoughGamepadsScreen.java:58
+msgid "Missing"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/NotEnoughGamepadsScreen.java:76
+msgid "MAIN MENU"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:75
+msgid ""
+"Pixel Wheels is free, but you can support its\n"
+"development in various ways."
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:76
+msgid "VISIT SUPPORT PAGE"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:131
+msgid "Audio & Video"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:145
+msgid "Sound FX:"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:159
+msgid "Music:"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:175
+msgid "Fullscreen:"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:180
+msgid "About"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:182
+msgid "Pixel Wheels %s"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:183
+msgid "CREDITS"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:204
+msgid "Misc"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:205
+msgid "DEVELOPER OPTIONS"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:215
+msgid "Internal:"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:299
+msgid "%s:"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:301
+msgid "CONFIGURE"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/KeyboardConfigScreen.java:71
+msgid "Steer left:"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/KeyboardConfigScreen.java:72
+msgid "Steer right:"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/KeyboardConfigScreen.java:73
+msgid "Brake:"
+msgstr ""
+
+#: core/src/com/agateau/pixelwheels/screens/KeyboardConfigScreen.java:74
+msgid "Trigger:"
+msgstr ""
+
+#: core/src/com/agateau/ui/menu/SwitchMenuItem.java:190
+msgid "ON"
+msgstr ""
+
+#: core/src/com/agateau/ui/menu/SwitchMenuItem.java:190
+msgid "OFF"
+msgstr ""
