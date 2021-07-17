@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-16 20:00+0200\n"
+"POT-Creation-Date: 2021-07-17 14:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,4 +129,102 @@ msgstr ""
 
 #: core/src/com/agateau/ui/menu/SwitchMenuItem.java:190
 msgid "OFF"
+msgstr ""
+
+#: android/assets/screens/pauseoverlay.gdxui:4
+msgid "Paused"
+msgstr ""
+
+#: android/assets/screens/pauseoverlay.gdxui:7
+msgid "RESUME"
+msgstr ""
+
+#: android/assets/screens/pauseoverlay.gdxui:9
+#: android/assets/screens/finishedoverlay.gdxui:34
+msgid "RESTART"
+msgstr ""
+
+#: android/assets/screens/pauseoverlay.gdxui:11
+msgid "QUIT TO MENU"
+msgstr ""
+
+#: android/assets/screens/pauseoverlay.gdxui:12
+#: android/assets/screens/mainmenu.gdxui:33
+msgid "SETTINGS"
+msgstr ""
+
+#: android/assets/screens/mainmenu.gdxui:26
+msgid "ONE PLAYER"
+msgstr ""
+
+#: android/assets/screens/mainmenu.gdxui:27
+msgid "MULTI PLAYER"
+msgstr ""
+
+#: android/assets/screens/mainmenu.gdxui:30
+#: android/assets/screens/selectgamemode.gdxui:9
+msgid "QUICK RACE"
+msgstr ""
+
+#: android/assets/screens/mainmenu.gdxui:31
+#: android/assets/screens/selectgamemode.gdxui:10
+msgid "CHAMPIONSHIP"
+msgstr ""
+
+#: android/assets/screens/mainmenu.gdxui:35
+msgid "QUIT"
+msgstr ""
+
+#: android/assets/screens/gamepadconfig.gdxui:5
+msgid "Gamepad config"
+msgstr ""
+
+#: android/assets/screens/selecttrack.gdxui:4
+msgid "Select Track"
+msgstr ""
+
+#: android/assets/screens/selecttrack.gdxui:11
+msgid "Best Lap"
+msgstr ""
+
+#: android/assets/screens/selecttrack.gdxui:14
+msgid "Best Total"
+msgstr ""
+
+#: android/assets/screens/selectchampionship.gdxui:5
+msgid "Select Championship"
+msgstr ""
+
+#: android/assets/screens/debug.gdxui:12
+msgid "Settings affecting game play have been modified, scores won't be saved"
+msgstr ""
+
+#: android/assets/screens/finishedoverlay.gdxui:35
+msgid "BACK TO MENU"
+msgstr ""
+
+#: android/assets/screens/finishedoverlay.gdxui:38
+msgid "CONTINUE"
+msgstr ""
+
+#: android/assets/screens/selectvehicle.gdxui:5
+#: android/assets/screens/multiplayer.gdxui:5
+msgid "Select Your Vehicle"
+msgstr ""
+
+#: android/assets/screens/selectgamemode.gdxui:5
+msgid "Select Game Mode"
+msgstr ""
+
+#: android/assets/screens/notenoughgamepads.gdxui:4
+msgid "Some gamepads are missing"
+msgstr ""
+
+#: android/assets/screens/keyboardconfig.gdxui:5
+msgid "Keyboard config"
+msgstr ""
+
+#: android/assets/screens/multiplayer.gdxui:8
+#: android/assets/screens/multiplayer.gdxui:10
+msgid "Ready!"
 msgstr ""

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0">
+  <its:translateRule selector="/gdxui" translate="no"/>
+  <its:translateRule selector="//Label" translate="yes"/>
+  <its:translateRule selector="//Action" translate="no"/>
+  <its:translateRule selector="//@text" translate="yes"/>
+</its:rules>
+

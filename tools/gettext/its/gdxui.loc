@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<locatingRules>
+  <locatingRule name="gdxui" pattern="*.gdxui" target="gdxui.its"/>
+</locatingRules>

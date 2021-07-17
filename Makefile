@@ -139,9 +139,13 @@ po-update:
 	@for dir in core desktop android ; do \
 		find $$dir -name '*.java' | grep -v '/build/' >> po/files ; \
 	done
+	@find android/assets -name '*.gdxui' >> po/files
 
 	@echo "Extracting messages"
-	@xgettext --from-code=utf-8 --keyword=tr --keyword=trn:1,2 --output po/messages.pot --files-from po/files
+	@GETTEXTDATADIR=$(CURDIR)/tools/gettext xgettext --from-code=utf-8 \
+		--keyword=tr --keyword=trn:1,2 \
+		--output po/messages.pot \
+		--files-from po/files
 
 	@for po_file in po/*.po ; do \
 		echo "Updating $$po_file" ; \
