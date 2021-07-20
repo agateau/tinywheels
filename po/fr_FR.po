@@ -1,3 +1,20 @@
+# Header entry was created by Lokalize.
+#
+#: core/src/com/agateau/pixelwheels/gameinput/PieTouchInputHandler.java:51
+# Aurélien Gâteau <mail@agateau.com>, 2021.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Aurélien Gâteau <mail@agateau.com>\n"
+"PO-Revision-Date: 2021-07-19 23:16+0200\n"
+"Project-Id-Version: \n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 19.12.3\n"
+
 #: core/src/com/agateau/pixelwheels/gameinput/PieTouchInputHandler.java:51
 msgid "Pie buttons"
 msgstr ""
@@ -28,7 +45,7 @@ msgstr ""
 
 #: core/src/com/agateau/pixelwheels/screens/NotEnoughGamepadsScreen.java:76
 msgid "MAIN MENU"
-msgstr ""
+msgstr "MENU PRINCIPAL"
 
 #: core/src/com/agateau/pixelwheels/screens/ConfigScreen.java:75
 msgid ""
@@ -136,25 +153,25 @@ msgstr ""
 
 #: android/assets/screens/mainmenu.gdxui:26
 msgid "ONE PLAYER"
-msgstr ""
+msgstr "UN JOUEUR"
 
 #: android/assets/screens/mainmenu.gdxui:27
 msgid "MULTI PLAYER"
-msgstr ""
+msgstr "MULTI-JOUEURS"
 
 #: android/assets/screens/mainmenu.gdxui:30
 #: android/assets/screens/selectgamemode.gdxui:9
 msgid "QUICK RACE"
-msgstr ""
+msgstr "COURSE RAPIDE"
 
 #: android/assets/screens/mainmenu.gdxui:31
 #: android/assets/screens/selectgamemode.gdxui:10
 msgid "CHAMPIONSHIP"
-msgstr ""
+msgstr "CHAMPIONNAT"
 
 #: android/assets/screens/mainmenu.gdxui:35
 msgid "QUIT"
-msgstr ""
+msgstr "QUITTER"
 
 #: android/assets/screens/gamepadconfig.gdxui:5
 msgid "Gamepad config"
