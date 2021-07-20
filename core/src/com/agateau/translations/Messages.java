@@ -43,9 +43,9 @@ public class Messages {
         }
     }
 
-    public final HashMap<String, String> plainEntries = new HashMap<String, String>();
+    public final HashMap<String, String> plainEntries = new HashMap<>();
 
-    public final HashMap<PluralId, String[]> pluralEntries = new HashMap<PluralId, String[]>();
+    public final HashMap<PluralId, String[]> pluralEntries = new HashMap<>();
 
     public int plural(int n) {
         return n == 1 ? 0 : 1;

@@ -88,8 +88,7 @@ public class GettextImplementation implements Translator.Implementation {
 
         try {
             return (Messages) cls.newInstance();
-        } catch (InstantiationException e) {
-        } catch (IllegalAccessException e) {
+        } catch (InstantiationException | IllegalAccessException ignored) {
         }
         return null;
     }
