@@ -36,33 +36,7 @@ public class Translator {
         String trn(String singular, String plural, int n);
     }
 
-    public static class DebugImplementation implements Implementation {
-        @Override
-        public String tr(String source) {
-            return "!" + source;
-        }
-
-        @Override
-        public String trn(String singular, String plural, int n) {
-            return "!" + Translator.sDefaultImplementation.trn(singular, plural, n);
-        }
-    }
-
-    static final Implementation sDefaultImplementation =
-            new Implementation() {
-                @Override
-                public String tr(String source) {
-                    return source;
-                }
-
-                @Override
-                public String trn(String singular, String plural, int n) {
-                    String txt = n == 1 ? singular : plural;
-                    return txt.replace("%#", String.valueOf(n));
-                }
-            };
-
-    private static Implementation sImplementation = sDefaultImplementation;
+    private static Implementation sImplementation = DefaultImplementation.instance;
 
     /**
      * Switch to the specified implementation, or fall back to the default, pass-through,
@@ -72,7 +46,7 @@ public class Translator {
      */
     public static void setImplementation(Implementation impl) {
         if (impl == null) {
-            sImplementation = sDefaultImplementation;
+            sImplementation = DefaultImplementation.instance;
         } else {
             sImplementation = impl;
         }
