@@ -12,6 +12,8 @@ Building Pixel Wheels requires the following components:
     - PAFX: <https://github.com/agateau/pafx>
     - Pillow: <https:python-pillow.github.io/>
     - pypng: <https://github.com/drj11/pypng>
+    - jinja2: <https://palletsprojects.com/p/jinja/>
+    - polib: <https://github.com/izimobil/polib/>
 
 ### Python packages
 
@@ -30,6 +32,12 @@ Some assets must be generated from work files with:
 Once assets have been generated, you can pack them into atlases with:
 
     make packer
+
+## Compile translations
+
+Translations files (.po) must be turned into Java files with:
+
+    make po-compile
 
 ## Build the game
 

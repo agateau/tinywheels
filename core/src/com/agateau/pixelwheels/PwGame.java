@@ -34,6 +34,8 @@ import com.agateau.pixelwheels.sound.SoundSettings;
 import com.agateau.pixelwheels.stats.GameStats;
 import com.agateau.pixelwheels.stats.GameStatsImpl;
 import com.agateau.pixelwheels.stats.JsonGameStatsImplIO;
+import com.agateau.translations.GettextImplementation;
+import com.agateau.translations.Translator;
 import com.agateau.ui.MouseCursorManager;
 import com.agateau.ui.ScreenStack;
 import com.agateau.utils.Assert;
@@ -119,11 +121,17 @@ public class PwGame extends Game implements GameConfig.ChangeListener {
         mAudioManager = new DefaultAudioManager(mAssets);
         setupCursorManager();
         setupConfig();
+        setupTranslations();
         setupTrackStats();
         setupRewardManager();
         Box2D.init();
         setupDisplay();
         showMainMenu();
+    }
+
+    private void setupTranslations() {
+        Translator.Implementation impl = GettextImplementation.load(null);
+        Translator.setImplementation(impl);
     }
 
     @Override

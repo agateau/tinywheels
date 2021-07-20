@@ -32,6 +32,7 @@ package com.agateau.translations;
 public class Translator {
     public interface Implementation {
         String tr(String source);
+
         String trn(String singular, String plural, int n);
     }
 
@@ -47,23 +48,26 @@ public class Translator {
         }
     }
 
-    static final Implementation sDefaultImplementation = new Implementation() {
-        @Override
-        public String tr(String source) {
-            return source;
-        }
+    static final Implementation sDefaultImplementation =
+            new Implementation() {
+                @Override
+                public String tr(String source) {
+                    return source;
+                }
 
-        @Override
-        public String trn(String singular, String plural, int n) {
-            String txt = n == 1 ? singular : plural;
-            return txt.replace("%#", String.valueOf(n));
-        }
-    };
+                @Override
+                public String trn(String singular, String plural, int n) {
+                    String txt = n == 1 ? singular : plural;
+                    return txt.replace("%#", String.valueOf(n));
+                }
+            };
 
     private static Implementation sImplementation = sDefaultImplementation;
 
     /**
-     * Switch to the specified implementation, or fall back to the default, pass-through, implementation if
+     * Switch to the specified implementation, or fall back to the default, pass-through,
+     * implementation if
+     *
      * @p impl is null
      */
     public static void setImplementation(Implementation impl) {

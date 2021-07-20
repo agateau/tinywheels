@@ -81,7 +81,7 @@ apk-dist:
 	done
 
 
-dist: assets packer check desktop-dist apk-dist
+dist: assets packer po-compile check desktop-dist apk-dist
 
 clean-dist: clean dist
 
@@ -151,5 +151,9 @@ po-update:
 		echo "Updating $$po_file" ; \
 		msgmerge --update $$po_file po/messages.pot ; \
 	done
+
+po-compile:
+	mkdir -p core/generated/com/agateau/translations
+	tools/po-compile/po-compile-all po core/generated/com/agateau/translations
 
 .PHONY: desktop-dist apk-dist dist clean-dist tag tagpush fastlane-beta check tools build release-archives
